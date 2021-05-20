@@ -1,0 +1,51 @@
+.bubble{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    background:none;
+    margin:25 30;
+    border-radius: 50%;
+}
+.navbar-brand
+{
+    margin-right:45%;
+}
+.nav-item
+{
+    margin-left: 30px;
+}
+.chat-footer
+{
+    padding:2%;
+}
+.chat-header{
+    background-color: aqua;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.chat-popup
+{
+    display: none;
+    position: relative;
+    height: fixed;
+    width:25%;
+    margin-top: -5%;
+    margin-left: 70%;
+    height: auto;
+    background: whitesmoke;
+}
+.close
+{
+    margin-top: 15px;
+}
+.mytext
+{
+    width: 70%;
+    margin-right: 20px;
+}
+#send-btn
+{
+    width: 20% ;
+}
