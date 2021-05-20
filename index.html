@@ -1,0 +1,132 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<title>Airbus websites</title>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1 " style="margin-left: 40px;">Airbus</span>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Commerical aircarft</a>
+        <a class="nav-item nav-link" href="#">Defense</a>
+        <a class="nav-item nav-link" href="#">Space</a>
+        <a class="nav-item nav-link " href="#">Innovation</a>
+        <a class="nav-item nav-link " href="#">Carrers</a>
+        <a class="nav-item nav-link" href="#">About</a>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" style="height: 60%;">
+      <div class="carousel-item active">
+        <img src="airbus4.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="airbus3.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="airbus1.jpg" class="d-block w-100">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="container">
+    <h1>
+      About
+    </h1>
+    <p class="text-info" style="font-size: 22px;">
+      Airbus is an international reference in the aerospace sector. We design, manufacture and deliver industry-leading
+      commercial aircraft, helicopters, military transports, satellites and launch vehicles, as well as providing data
+      services, navigation, secure communications, urban mobility and other solutions for customers on a global scale.
+      With a forward-looking strategy based on cutting-edge technologies, digital and scientific excellence, we aim for
+      a
+      better-connected, safer and more prosperous world.
+    </p>
+  </div>
+  <div class="bubble">
+    <input  type="image" src="support.png" />
+  </div>
+
+  <div class="chat-popup">
+      <div class="chat-header">
+          <div class="row">
+              <div class="col-10">
+                  <h4 style="padding-left: 20px">Chat</h4>
+              </div>
+              <div class="col-2">
+                  <button id="close" type="button" class="close" aria-label="Close"></button>
+              </div>
+          </div>
+      </div>
+      <div class="chat-footer">
+          <ul class="chats">
+              
+          </ul>
+               <input class="mytext" type="text" name="msg" value=""placeholder="Type ur message"!important>
+               <button type="submit" id="send-btn">Submit</button>
+      </div>
+  </div>
+
+  <!-- for js-->
+  <script>
+    var myCarousel = document.querySelector('#myCarousel')
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 10,
+      wrap: false
+    })
+  </script>
+
+  <!-- addded jQuery for bubble-->
+  <script>
+    $(".bubble").bind("click", function () {
+        $(".bubble").css({ "display": "none" });
+        $(".chat-popup").css({"display":"block"});
+      });
+      
+    $("#close").bind("click",function () {
+      $(".chat-popup").css({ "display": "none" });
+      $(".bubble").css({ "display": "block" });
+        $("li").remove();
+        $(".mytext").clearData();
+    });
+      
+      $("#send-btn").click(function(){
+        var str = $(".mytext").val();
+        var msg='<li>'+str+'</li>';
+        $(".chats").append(msg);
+    });
+  </script>
+    
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
